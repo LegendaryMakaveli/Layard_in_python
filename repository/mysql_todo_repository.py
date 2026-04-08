@@ -1,15 +1,11 @@
 import mysql.connector
 from typing import List, Optional
-from domain.models import Todo
+from data.models import Todo
 from repository.todo_repository import TodoRepository
 import os
 
 class MySQLTodoRepository(TodoRepository):
     def __init__(self, **db_config):
-        """
-        Initialize with a database config dictionary.
-        Example: {"host": "localhost", "user": "root", "password": "", "database": "todos"}
-        """
         self.db_config = db_config
         self._init_db()
 

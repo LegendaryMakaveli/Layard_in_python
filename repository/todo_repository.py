@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional
-from domain.models import Todo
+from data.models import Todo
 
 class TodoRepository(ABC):
     @abstractmethod
